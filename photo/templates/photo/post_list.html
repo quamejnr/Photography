@@ -1,0 +1,22 @@
+{%extends 'photo/base.html'%}
+{%block content%}
+    <!--Header-->
+        <h1>PhotoGraphy</h1>
+        <p>Home of Beauty</p>
+        <hr>
+
+    <!--Portfolio-->
+    {%for post in object_list%}
+        <main id="portfolio">
+            <div class="portfolio-content">
+                <a href="{{post.get_absolute_url}}"><img src="{{post.picture.url}}" alt=""></a>
+                <div class="work-info">
+                    <h2>{{post.photographer.profile.full_name}}</h2>
+                    <p>{{post.description}}</p>
+                    <p>{{post.title|title}}</p>
+                    <p>{{post.date_posted|date:'F d , Y'}}</p>
+                </div>
+            </div>
+        </main>
+    {%endfor%}
+{%endblock content%}

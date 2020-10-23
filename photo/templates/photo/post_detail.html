@@ -1,0 +1,29 @@
+{%extends 'photo/base.html'%}
+{%block content%}
+<style>
+    h2 {text-align: center;}
+</style>
+    <!--Header-->
+<!--        <h1>PhotoGraphy</h1>-->
+<!--        <p>Home of Beauty</p>-->
+<!--        <hr>-->
+
+    <!--Portfolio-->
+        <main id="portfolio">
+            <div class="mt-5">
+                <img class="img-detail rounded mx-auto d-block" src="{{post.picture.url}}" alt="">
+            </div>
+            {% if object.photographer == user %}
+                <div class="d-flex justify-content-center">
+                    <a class="btn btn-outline-secondary btn-sm mt-5 mb-4 ml-4" href="{% url 'post-update' object.slug %}">Update</a>
+                    <a class="btn btn-outline-danger btn-sm mt-5 mb-4 ml-4" href="{% url 'post-delete' object.slug %}">Delete</a>
+                </div>
+            {% endif %}
+                <div class="mt-4">
+                    <h2>{{object.photographer.profile.full_name}}</h2>
+                    <p>{{object.description}}</p>
+                    <p>{{object.title|title}}</p>
+                    <p>{{object.date_posted|date:'F d , Y'}}</p>
+                </div>
+        </main>
+{%endblock content%}

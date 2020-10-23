@@ -1,0 +1,21 @@
+{%extends 'photo/base.html'%}
+{% load crispy_forms_tags %}
+{%block content%}
+   <div id="register_form" >
+
+<!--       Always add enctype='multipart/form-data' when working with images-->
+
+       <form method="POST" enctype="multipart/form-data">
+           {% csrf_token %}
+           <fieldset>
+               <legend class="leg">New Post</legend>
+               <div class="forms">
+                   {{form|crispy}}
+               </div>
+           </fieldset>
+           <div>
+               <button class="btn">Post</button>
+           </div>
+       </form>
+   </div>
+{%endblock content%}

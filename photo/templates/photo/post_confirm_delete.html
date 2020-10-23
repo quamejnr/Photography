@@ -1,0 +1,16 @@
+{%extends 'photo/base.html'%}
+{%block content%}
+   <div id="register_form" >
+       <form method="POST">
+           {% csrf_token %}
+           <fieldset class="form-group">
+               <legend class="leg">Delete Post</legend>
+               <h2>Are you sure you want to delete post, "{{object.title}}"</h2>
+           </fieldset>
+           <div class="form-group">
+               <button class="btn btn-outline-danger mr-4" type="submit">Yes, Delete</button>
+               <a class="btn btn-outline-secondary" href="{{post.get_absolute_url}}">Cancel</a>
+           </div>
+       </form>
+   </div>
+{%endblock content%}

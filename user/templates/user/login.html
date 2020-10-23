@@ -1,0 +1,23 @@
+{%extends 'photo/base.html'%}
+{% load crispy_forms_tags %}
+{%block content%}
+   <div id="register_form">
+       <form method="POST">
+           {% csrf_token %}
+           <fieldset>
+               <legend class="leg">Log In</legend>
+               <div class="forms">
+                   {{form|crispy}}
+               </div>
+           </fieldset>
+           <div>
+               <button class="btn">Log In</button>
+               <div class="reg-footer">
+                   <small>
+                       Need an account? <a class="ml-3" href="{% url 'register' %}">Sign Up</a>
+                   </small>
+               </div>
+           </div>
+       </form>
+   </div>
+{%endblock content%}
