@@ -1,8 +1,8 @@
 {%extends 'photo/base.html'%}
 {%block content%}
     <!--Header-->
-        <h1>PhotoGraphy</h1>
-        <p>Home of Beauty</p>
+        <h1>{{view.kwargs.username}}</h1>
+<!--        <p>{{object_list.photographer}}</p>-->
         <hr>
 
     <!--Portfolio-->
@@ -15,7 +15,6 @@
 <!--                    <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" alt="">-->
                     <h2>{{post.title|title}}</h2>
                     <p>{{post.description}}</p>
-                    <a href="{% url 'user-post' post.photographer.username %}"><p>{{post.photographer}}</p></a>
                     <p>{{post.date_posted|date:'F d , Y'}}</p>
                 </div>
             </div>

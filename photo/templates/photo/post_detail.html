@@ -15,7 +15,7 @@
             </div>
             {% if object.photographer == user %}
                 <div class="d-flex justify-content-center">
-                    <a class="btn btn-outline-secondary btn-sm mt-5 mb-4 ml-4" href="{% url 'post-update' object.slug %}">Update</a>
+                    <a class="btn btn-outline-secondary btn-sm mt-5 mb-4 ml-4" href="{% url 'post-update' object.slug %}">Edit</a>
                     <a class="btn btn-outline-danger btn-sm mt-5 mb-4 ml-4" href="{% url 'post-delete' object.slug %}">Delete</a>
                 </div>
             {% endif %}
