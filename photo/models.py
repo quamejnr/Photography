@@ -11,7 +11,7 @@ class Post(models.Model):
     description = models.TextField(default='', blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
     photographer = models.ForeignKey(User, on_delete=models.CASCADE)
-    slug = AutoSlugField(populate_from='title')
+    slug = AutoSlugField(populate_from='title', always_update=True)
 
     def __str__(self):
         return self.title

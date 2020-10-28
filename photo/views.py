@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
+from user.models import Profile
 from django.contrib.auth.models import User
 
 
@@ -11,14 +12,20 @@ class PostListView(ListView):
     paginate_by = 5
 
 
-class UserPostListView(ListView):
+class PhotographerPostListView(ListView):
     model = Post
     paginate_by = 5
-    template_name = 'photo/user_post.html'
+    template_name = 'photo/photographer_post.html'
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(photographer=user).order_by('-date_posted')
+
+
+class PhotographerListView(ListView):
+    model = Profile
+    paginate_by = 5
+    template_name = 'photo/photographer.html'
 
 
 class PostDetailView(DetailView):

@@ -15,7 +15,7 @@
 <!--                    <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" alt="">-->
                     <h2>{{post.title|title}}</h2>
                     <p>{{post.description}}</p>
-                    <a href="{% url 'user-post' post.photographer.username %}"><p>{{post.photographer}}</p></a>
+                    <a href="{% url 'photographer-post' post.photographer.username %}"><p>{{post.photographer}}</p></a>
                     <p>{{post.date_posted|date:'F d , Y'}}</p>
                 </div>
             </div>

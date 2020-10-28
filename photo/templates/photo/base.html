@@ -291,13 +291,13 @@
             <ul id="nav" class="navbar-dark">
                 {% if user.is_authenticated %}
                     <li><a class="nav-item navbar-brand" href="{% url 'post-home'%}">Home</a></li>
-                    <li><a class="nav-item navbar-brand" href="{% url 'photographers'%}">Photographers</a></li>
-                    <li><a class="nav-item navbar-brand" href="{% url 'profile' %}">Profile</a></li>
+                    <li><a class="nav-item navbar-brand" href="{% url 'photographer'%}">Photographers</a></li>
+                    <li><a class="nav-item navbar-brand" href="{% url 'profile'%}">Profile</a></li>
                     <li><a class="nav-item navbar-brand" href="{% url 'post-create' %}">Submit Photo</a></li>
                     <li><a class="nav-item navbar-brand" href="{% url 'logout' %}">Log Out</a></li>
                 {% else %}
                     <li><a class="nav-item navbar-brand" href="{% url 'post-home'%}">Home</a></li>
-                    <li><a class="nav-item navbar-brand" href="{% url 'photographers'%}">Photographers</a></li>
+                    <li><a class="nav-item navbar-brand" href="{% url 'photographer'%}">Photographers</a></li>
                     <li><a class="nav-item navbar-brand" href="{% url 'post-create' %}">Submit Photo</a></li>
                     <li><a class="nav-item navbar-brand" href="{% url 'login' %}">Log In</a></li>
                     <a href="{% url 'register'%}"><button class="btn">SignUp</button></a>

@@ -1,16 +1,16 @@
 {%extends 'photo/base.html'%}
 {%block content%}
     <div class="photographer-content">
-        {%for photographer in photographers%}
+        {%for profile in object_list%}
             <div class="photographer-info">
                 <div>
-                    <img class="rounded-circle photographer-img" src="{{photographer.image.url}}" alt="">
+                    <img class="rounded-circle photographer-img" src="{{profile.image.url}}" alt="">
                 </div>
                 <div class="photographer-bio">
-                    <h2>{{photographer.user.profile.full_name}}</h2>
-                    <p>{{photographer.user.email}}</p>
+                    <h2>{{profile.full_name}}</h2>
+                    <p>{{profile.user.email}}</p>
                     <p>{{photographer.bio}}</p>
-                    <a href="#">Portfolio</a>
+                    <a href="{% url 'photographer-post' profile.user.username %}">Portfolio</a>
                 </div>
             </div>
         {%endfor%}
