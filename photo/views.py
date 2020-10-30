@@ -21,6 +21,12 @@ class PhotographerPostListView(ListView):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(photographer=user).order_by('-date_posted')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        photographer = get_object_or_404(User, username=self.kwargs.get('username'))
+        context['profile'] = Profile.objects.get(user=photographer)
+        return context
+
 
 class PhotographerListView(ListView):
     model = Profile
