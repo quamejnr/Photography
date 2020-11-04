@@ -226,7 +226,56 @@
         #portfolio .portfolio-detail p {
            font-size: 15px;
            text-align: left;
-           color: rgba(255, 255, 255, 0.5);
+           color: rgba(255, 255, 255, 0.6);
+        }
+
+        #portfolio .portfolio-info {
+            display: flex;
+        }
+
+        #portfolio .portfolio-info img {
+           height: 50px;
+           width: 50px;
+           margin-top: 10px;
+           filter: brightness(100%);
+        }
+
+        #portfolio .portfolio-info img:hover {
+           transform: none;
+        }
+
+        #portfolio .portfolio-info h2 {
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           text-align: left;
+           color: rgba(255, 255, 255, 0.87);
+           font-size: 50px;
+           font-weight: bold;
+        }
+
+        #portfolio .portfolio-info p {
+           font-size: 15px;
+           text-align: left;
+           color: rgba(255, 255, 255, 0.6);
+        }
+
+        #portfolio .gallery {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: auto auto;
+            grid-gap: 50px;
+            margin-bottom: 70px;
+
+        }
+
+        #portfolio .gallery img {
+            height: 40vh;
+            width: 40vw;
+            filter: brightness(100%);
+        }
+
+        #portfolio .gallery img:hover {
+            transform: scale(1.05);
         }
 
 /*Photographer*/
@@ -264,7 +313,7 @@
             font-size: 15px;
             margin-left: 5px;
             text-align: left;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.6);
             font-family: 'Lato';
         }
         .photographer-bio a {
@@ -280,9 +329,10 @@
             color: rgba(255, 255, 255, 0.87);
             text-decoration: none;
         }
+
 /* Profile */
         #profile {
-            width: 80%;
+            width: 90%;
             display: grid;
             grid-template-columns: 50% 50%;
             grid-gap: 100px 50px;
@@ -308,14 +358,24 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 20px;
         }
+
         #register_form .leg {
             color: rgba(255, 255, 255, 0.87);
+            font-size: 50px;
+            font-weight: bold;
             margin-bottom: 30px;
             text-align: center;
         }
+
+        #register_form p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 20px;
+        }
+
         #register_form .forms {
             color: rgba(255, 255, 255, 0.5);
         }
+
         #register_form .reg-footer {
             margin-top: 20px;
             color: rgba(255, 255, 255, 0.3);
@@ -445,10 +505,6 @@
                font-size: 40px;
             }
 
-            #portfolio .acc-item img {
-                display: none;
-            }
-
             #portfolio h3 {
                 margin :auto;
             }
@@ -485,11 +541,16 @@
 
         /*Portfolio*/
             .portfolio-content {
-            display: grid;
-            grid-template-columns: 100%;
-            justify-self: center;
-            align-self: center;
-            margin: 100px auto 70px auto;
+                display: grid;
+                grid-template-columns: 100%;
+                justify-self: center;
+                align-self: center;
+                margin: 100px auto 70px auto;
+            }
+
+
+            #portfolio .acc-item img {
+                display: none
             }
 
             .work-info {
@@ -504,7 +565,41 @@
                text-align: center;
                font-size: 15px;
             }
+
             #portfolio img {
+                height: 30vh;
+                width: 100%;
+            }
+
+            #portfolio .portfolio-info {
+                justify-content: center;
+            }
+
+            #portfolio .portfolio-info img {
+                display: none;
+            }
+
+            #portfolio .portfolio-info h2 {
+               text-align: center;
+               font-size: 30px;
+            }
+
+            #portfolio .portfolio-info p {
+               font-size: 12px;
+               text-align: center;
+            }
+
+            #portfolio .gallery {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 100%;
+                justify-self: center;
+                align-self: center;
+                margin: 100px auto 70px auto;
+                grid-gap: 50px;
+            }
+
+            #portfolio .gallery img {
                 height: 30vh;
                 width: 100%;
             }
@@ -524,6 +619,29 @@
              .photographer-info p {
                font-size: 15px;
              }
+
+        /* Profile */
+            #profile {
+                width: 90%;
+                display: grid;
+                grid-template-columns: 100%;
+            }
+
+            #profile .profile-info {
+                justify-content: center;
+                text-align: center;
+            }
+
+            #profile .profile-info img {
+                height: 50px;
+                width: 50px;
+            }
+
+            #profile .profile-edit {
+                width: 100%;
+                justify-content: center;
+            }
+
 
         /* Register */
             #register_form {

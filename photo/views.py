@@ -14,14 +14,15 @@ class PostListView(ListView):
 
 class PhotographerPostListView(ListView):
     model = Post
-    paginate_by = 5
-    template_name = 'photo/photographer_post.html'
+    paginate_by = 6
+    template_name = 'photo/portfolio.html'
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(photographer=user).order_by('-date_posted')
 
     def get_context_data(self, **kwargs):
+        # retrieves profile data of a photographer
         context = super().get_context_data(**kwargs)
         photographer = get_object_or_404(User, username=self.kwargs.get('username'))
         context['profile'] = Profile.objects.get(user=photographer)

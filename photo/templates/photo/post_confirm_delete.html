@@ -5,7 +5,7 @@
            {% csrf_token %}
            <fieldset class="form-group">
                <legend class="leg">Delete Post</legend>
-               <h2>Are you sure you want to delete post, "{{object.title}}"</h2>
+               <p>Are you sure you want to delete post, "{{object.title}}"?</p>
            </fieldset>
            <div class="form-group">
                <button class="btn btn-outline-danger mr-4" type="submit">Yes, Delete</button>

@@ -9,8 +9,12 @@
                 <p style="font-family:Monospace">{{object.date_posted|date:'F d , Y'}}</p>
                 <hr>
                 <div class="acc-item justify-content-start mt-2 mb-2">
-                    <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" alt="">
-                    <h3>{{post.photographer}}</h3>
+                    <a href="{% url 'photographer-post' object.photographer.username %}">
+                        <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" alt="">
+                    </a>
+                    <a href="{% url 'photographer-post' object.photographer.username %}">
+                        <h3>{{object.photographer}}</h3>
+                    </a>
                 </div>
             </div>
             <div class="mt-5 mb-5">

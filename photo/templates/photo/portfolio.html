@@ -1,0 +1,29 @@
+{%extends 'photo/base.html'%}
+{%block content%}
+    <!--Portfolio-->
+    <main id="portfolio">
+        <div class="portfolio-info">
+            <img class="rounded-circle photographer-img" src="{{profile.image.url}}" alt="">
+            <div>
+                <h2>{{profile.full_name}}</h2>
+                <p><span class="text-muted" style="font-style:italic">Contact:</span> {{profile.user.email}}</p>
+                <p><span class="text-muted" style="font-style:italic">Bio:</span> {{profile.bio}}</p>
+            </div>
+        </div>
+        <hr>
+        {% if object_list.count > 0 %}
+        <div class="gallery">
+            {%for post in object_list%}
+                    <a href="{{post.get_absolute_url}}"><img src="{{post.picture.url}}" alt=""></a>
+            {%endfor%}
+        </div>
+        {% else %}
+            <div class="portfolio-detail">
+                <p>{{view.kwargs.username}} has no posts</p>
+            </div>
+        {% endif %}
+
+    </main>
+
+
+{%endblock content%}
