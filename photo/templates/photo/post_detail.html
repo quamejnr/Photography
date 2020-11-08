@@ -2,13 +2,13 @@
 {%block content%}
 
     <!--Portfolio-->
-        <main id="portfolio">
-            <div class=" portfolio-detail mt-4">
+        <article id="portfolio">
+            <section class=" portfolio-detail mt-4">
                 <h2>{{object.title}}</h2>
                 <p>{{object.description}}</p>
                 <p style="font-family:Monospace">{{object.date_posted|date:'F d , Y'}}</p>
                 <hr>
-                <div class="acc-item justify-content-start mt-2 mb-2">
+                <div class="acc-item mt-2 mb-2">
                     <a href="{% url 'photographer-post' object.photographer.username %}">
                         <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" alt="">
                     </a>
@@ -16,15 +16,15 @@
                         <h3>{{object.photographer}}</h3>
                     </a>
                 </div>
-            </div>
-            <div class="mt-5 mb-5">
+            </section>
+            <section class="mt-5 mb-5">
                 <img class="img-detail rounded mx-auto d-block" src="{{post.picture.url}}" alt="">
-            </div>
+            </section>
             {% if object.photographer == user %}
-                <div class="d-flex justify-content-center">
+                <section class="d-flex justify-content-center">
                     <a class="btn btn-outline-secondary btn-sm mt-4 mb-4 " href="{% url 'post-update' object.slug %}">Edit</a>
                     <a class="btn btn-outline-danger btn-sm mt-4 mb-4 ml-3" href="{% url 'post-delete' object.slug %}">Delete</a>
-                </div>
+                </section>
             {% endif %}
-        </main>
+        </article>
 {%endblock content%}

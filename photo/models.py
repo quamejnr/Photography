@@ -9,7 +9,7 @@ from PIL import Image
 class Post(models.Model):
     picture = models.ImageField(upload_to="pictures/")
     title = models.CharField(max_length=100, unique=True)
-    description = models.TextField(default='', blank=True)
+    description = models.TextField(max_length=200, default='', blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
     photographer = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = AutoSlugField(populate_from='title', always_update=True)

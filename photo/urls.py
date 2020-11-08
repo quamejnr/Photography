@@ -2,7 +2,6 @@ from django.urls import path
 from photo.views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, \
                         PhotographerPostListView, \
                         PhotographerListView
-from . import views
 
 urlpatterns = [
     path('', PostListView.as_view(), name='post-home'),

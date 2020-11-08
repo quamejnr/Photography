@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
@@ -52,6 +53,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['picture', 'title', 'description']
+    template_name = 'photo/post_update_form.html'
 
     def test_func(self):
         # Ensures users can only edit their respective posts
@@ -63,7 +65,6 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = '/'
 
     def test_func(self):
         # Ensures users can only delete their respective posts
@@ -71,3 +72,8 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.photographer:
             return True
         return False
+
+    def get_success_url(self):
+        # Reversing success url to photographer's portfolio instead of home
+        username = self.object.photographer
+        return reverse_lazy('photographer-post', kwargs={'username': username})

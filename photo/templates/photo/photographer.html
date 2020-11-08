@@ -1,8 +1,8 @@
 {%extends 'photo/base.html'%}
 {%block content%}
-    <div class="photographer-content">
+    <article class="photographer-content">
         {%for profile in object_list%}
-            <div class="photographer-info">
+            <section class="photographer-info">
                 <div>
                     <img class="rounded-circle photographer-img" src="{{profile.image.url}}" alt="">
                 </div>
@@ -12,7 +12,7 @@
                     <p>{{photographer.bio}}</p>
                     <a href="{% url 'photographer-post' profile.user.username %}">Portfolio</a>
                 </div>
-            </div>
+            </section>
         {%endfor%}
-    </div>
+    </article>
 {%endblock content%}

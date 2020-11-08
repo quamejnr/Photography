@@ -1,32 +1,36 @@
 {%extends 'photo/base.html'%}
 {% load crispy_forms_tags %}
 {%block content%}
-            <div id="profile">
-                <div class="profile-info">
-                    <div>
+        <article id="profile">
+            <section class="profile-info">
+                <div>
                     <img class="rounded-circle photographer-img" src="{{user.profile.image.url}}" alt="">
-                    </div>
-                    <div>
-                        <h2>{{user.profile.full_name}}</h2>
-                        <p><span class="text-muted" style="font-style:italic">Email:</span> {{user.email}}</p>
-                        <p><span class="text-muted" style="font-style:italic">Bio:</span> {{user.profile.bio}}</p>
+                </div>
+                <div>
+                    <h2>{{user.profile.full_name}}</h2>
+                    <p><span class="text-muted" style="font-style:italic">Email:</span> {{user.email}}</p>
+                    <p><span class="text-muted" style="font-style:italic">Bio:</span> {{user.profile.bio}}</p>
+                    <div class="photographer-bio">
+                        <a href="{% url 'photographer-post' user.username %}">Portfolio</a>
                     </div>
                 </div>
+            </section>
 
-                <div class="profile-edit">
-                    <form method="POST" enctype="multipart/form-data">
-                       {% csrf_token %}
-                       <fieldset>
-                           <legend class="leg">Profile Info</legend>
-                           <div class="forms">
-                               {{u_form|crispy}}
-                               {{p_form|crispy}}
-                           </div>
-                       </fieldset>
-                       <div>
-                           <button class="btn">Update</button>
+<!--        Profile Edit Form-->
+            <section class="profile-edit">
+                <form method="POST" enctype="multipart/form-data">
+                   {% csrf_token %}
+                   <fieldset>
+                       <legend class="leg">Edit Profile</legend>
+                       <div class="forms">
+                           {{u_form|crispy}}
+                           {{p_form|crispy}}
                        </div>
-                   </form>
-                </div>
-            </div>
+                   </fieldset>
+                   <div>
+                       <button class="btn">Update</button>
+                   </div>
+               </form>
+            </section>
+        </article>
 {%endblock content%}
