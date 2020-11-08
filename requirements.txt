@@ -28,3 +28,5 @@ soupsieve==2.0
 sqlparse==0.3.0
 stripe==2.27.0
 urllib3==1.24.2
+whitenoise==5.2.0
+
