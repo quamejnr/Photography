@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import django_heroku
-import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -147,9 +146,8 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 django_heroku.settings(locals())
 
 # Cloudinary settings
-cloudinary.config(
-    cloud_name=os.environ.get('CLOUD_NAME'),
-    api_key=os.environ.get('API_KEY'),
-    api_secret=os.environ.get('API_SECRET'),
-    secure=True
-)
+CLOUDINARY = {
+  'cloud_name': os.environ.get('CLOUD_NAME'),
+  'api_key': os.environ.get('API_KEY'),
+  'api_secret': os.environ.get('API_SECRET'),
+}
