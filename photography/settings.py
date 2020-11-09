@@ -16,6 +16,15 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 from decouple import config
+import environ
+
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -151,7 +160,9 @@ django_heroku.settings(locals())
 
 # Cloudinary settings
 cloudinary.config(
-  cloud_name=config('CLOUDINARY_CLOUD_NAME'),
-  api_key=config("CLOUDINARY_API_KEY"),
-  api_secret=config("CLOUDINARY_API_SECRET"),
+  cloud_name=env('CLOUDINARY_CLOUD_NAME'),
+  api_key=env("CLOUDINARY_API_KEY"),
+  api_secret=env("CLOUDINARY_API_SECRET"),
 )
+
+
