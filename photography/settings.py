@@ -149,9 +149,8 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 django_heroku.settings(locals())
 
 # Cloudinary settings
-# cloudinary.config(
-#   cloud_name='quamejnr',
-#   api_key=ENV['API_KEY'],
-#   api_secret=os.environ.get('API_SECRET'),
-# )
-CLOUDINARY_URL = "cloudinary://554587653573177:CBWkMLZGz_-U8uVkMJhyWr_NMxk@quamejnr"
+CLOUDINARY = {
+  'cloud_name': 'quamejnr',
+  'api_key': '554587653573177',
+  'api_secret': 'CBWkMLZGz_-U8uVkMJhyWr_NMxk',
+}
