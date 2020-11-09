@@ -27,5 +27,6 @@ class Profile(models.Model):
         #         img.save(self.image.path)
 
         img = cloudinary.CloudinaryImage(self.image.path)
-        img.build_url(width=100, height=100, crop="fill")
-        img.image(width=100, height=100, crop="fill")
+        img.build_url(width=1000, height=1000, crop="fill")
+        img.image(width=1000, height=1000, crop="fill")
+        img.save(self.image.path)
