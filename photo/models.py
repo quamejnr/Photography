@@ -25,8 +25,8 @@ class Post(models.Model):
         # resizing images before saving
         super().save(*args, **kwargs)
 
-        with Image.open(self.picture.path) as img:
-            if (img.height or img.width) > 1000:
-                output_size = (760, 1000)
-                img.thumbnail(output_size)
-                img.save(self.picture.path)
+        # with Image.open(self.picture.path) as img:
+        #     if (img.height or img.width) > 1000:
+        #         output_size = (760, 1000)
+        #         img.thumbnail(output_size)
+        #         img.save(self.picture.path)
