@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
-    picture = CloudinaryField('picture', s)
+    picture = CloudinaryField('picture')
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(max_length=200, default='', blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
