@@ -15,6 +15,7 @@ import django_heroku
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -150,7 +151,7 @@ django_heroku.settings(locals())
 
 # Cloudinary settings
 cloudinary.config(
-  cloud_name='quamejnr',
-  api_key="554587653573177",
-  api_secret="CBWkMLZGz_-U8uVkMJhyWr_NMxk",
+  cloud_name=config('CLOUD_NAME'),
+  api_key=config("API_KEY"),
+  api_secret=config("API_SECRET"),
 )
