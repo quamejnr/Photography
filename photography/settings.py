@@ -150,7 +150,7 @@ django_heroku.settings(locals())
 
 # Cloudinary settings
 cloudinary.config(
-  cloud_name=os.environ.get('CLOUD_NAME'),
+  cloud_name='quamejnr',
   api_key=os.environ.get('API_KEY'),
   api_secret=os.environ.get('API_SECRET'),
 )
