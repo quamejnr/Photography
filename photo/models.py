@@ -4,10 +4,11 @@ from django.contrib.auth.models import User
 from autoslug import AutoSlugField
 from django.urls import reverse
 from PIL import Image
+from cloudinary.models import CloudinaryField
 
 
 class Post(models.Model):
-    picture = models.ImageField(upload_to="pictures/")
+    picture = CloudinaryField('picture', s)
     title = models.CharField(max_length=100, unique=True)
     description = models.TextField(max_length=200, default='', blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
