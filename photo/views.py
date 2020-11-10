@@ -5,8 +5,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
 from user.models import Profile
 from django.contrib.auth.models import User
-from .forms import PostCreationForm
-from django.contrib.auth.decorators import login_required
 
 
 class PostListView(ListView):
