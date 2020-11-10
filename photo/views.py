@@ -1,10 +1,12 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
 from user.models import Profile
 from django.contrib.auth.models import User
+from .forms import PostCreationForm
+from django.contrib.auth.decorators import login_required
 
 
 class PostListView(ListView):
@@ -77,3 +79,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         # Reversing success url to photographer's portfolio instead of home
         username = self.object.photographer
         return reverse_lazy('photographer-post', kwargs={'username': username})
+

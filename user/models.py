@@ -16,9 +16,9 @@ class Profile(models.Model):
     def full_name(self):
         return f'{self.user.first_name} {self.user.last_name}'
 
-    def save(self, *args, **kwargs):
-        # resizing images before saving
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     # resizing images before saving
+    #     super().save(*args, **kwargs)
 
         # with Image.open(self.image.path) as img:
         #     if (img.height or img.width) > 300:
@@ -26,7 +26,3 @@ class Profile(models.Model):
         #         img.thumbnail(output_size)
         #         img.save(self.image.path)
 
-        img = cloudinary.CloudinaryImage(self.image.path)
-        img.build_url(width=1000, height=1000, crop="fill")
-        img.image(width=1000, height=1000, crop="fill")
-        img.save(self.image.path)

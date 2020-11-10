@@ -21,9 +21,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'slug': self.slug})
 
-    def save(self, *args, **kwargs):
-        # resizing images before saving
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     # resizing images before saving
+    #     super().save(*args, **kwargs)
 
         # with Image.open(self.picture.path) as img:
         #     if (img.height or img.width) > 1000:
