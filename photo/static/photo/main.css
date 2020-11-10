@@ -413,16 +413,11 @@
           background-repeat: no-repeat;
           position: relative;
           background-color: rgba(0, 0, 0, 0.2);
-          height: 60vh;
-        }
-
-        .fh5co-bg {
-          background-size: cover;
-          background-position: center center;
-          position: relative;
           width: 100%;
+          height: auto;
           float: left;
         }
+
         .fh5co-bg .overlay {
           position: absolute;
           top: 0;
@@ -442,16 +437,17 @@
         #fh5co-footer {
           padding: 7em 0;
           clear: both;
+          height: auto;
         }
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 850px) {
           #fh5co-footer {
             padding: 3em 0;
+            position: relative;
+            height: auto;
           }
         }
 
-        #fh5co-footer {
-          position: relative;
-        }
         #fh5co-footer .overlay {
           position: absolute;
           top: 0;
@@ -463,6 +459,7 @@
           -o-transition: 0.5s;
           transition: 0.5s;
         }
+
         #fh5co-footer h3 {
           margin-bottom: 15px;
           font-weight: bold;
