@@ -184,7 +184,7 @@
 
 
         #portfolio img {
-            filter: brightness(50%);
+            filter: brightness(70%);
             height: 40vh;
             width: 40vw;
             transition: 0.5s;
@@ -610,6 +610,7 @@
             }
 
             #portfolio img {
+                filter: brightness(100%);
                 height: 30vh;
                 width: 100%;
             }
