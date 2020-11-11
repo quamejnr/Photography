@@ -122,17 +122,12 @@
             text-align: right;
         }
 
-        #portfolio h1 {
-            text-align: center;
-            font-size: 50px;
-            color: rgba(255, 255, 255, 0.9);
-            margin: auto;
-        }
 
         #portfolio hr{
             border: 0.5px solid rgba(255, 255, 255, 0.3);
             width: 100%;
         }
+
         #portfolio .work-info h2 {
            color: rgba(255, 255, 255, 0.87);
            font-size: 60px;
@@ -467,6 +462,10 @@
           letter-spacing: 2px;
           text-transform: uppercase;
           color: rgba(255, 255, 255, 0.8);
+        }
+
+        #fh5co-footer p {
+          color: rgba(255, 255, 255, 0.3);
         }
 
         #fh5co-footer .fh5co-widget {
