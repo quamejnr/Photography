@@ -493,9 +493,9 @@
 
 
         #fh5co-footer .btn-primary {
-          background: rgba(64, 224, 208, 0.8);
+          background: rgba(64, 224, 208, 0.7);
           color: #fff;
-          border: 0px solid rgba(64, 224, 208, 0.8);
+          border: 0px solid rgba(64, 224, 208, 0.7);
         }
         #fh5co-footer .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
           background-color: rgba(255, 255, 255, 0.2)!important;
@@ -505,7 +505,7 @@
         #fh5co-footer .btn-primary.btn-outline {
           background: transparent;
           color: #F85A16;
-          border: 1px solid rgba(64, 224, 208, 0.8);
+          border: 1px solid rgba(64, 224, 208, 0.7);
         }
         #fh5co-footer .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
           background: #F85A16;
