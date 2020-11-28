@@ -547,12 +547,8 @@
         @media (max-width: 768px) {
 
         /* Header */
-            header h1 {
-            font-size: 35px;
-            }
-
-            header p {
-            font-size: 15px;
+            #nav h1 {
+                font-size: 25px;
             }
 
         /*Portfolio*/
