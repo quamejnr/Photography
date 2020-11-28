@@ -6,10 +6,11 @@
 
 /* Navigation */
         #nav {
-            background-color: rgb(24,24,24);
+            background-color: #121212;
             position: sticky;
             top: 0px;
             z-index: 2;
+            box-shadow: rgb(0 0 0) 0px 10px 20px -10px;
         }
 
         #nav h1 {
