@@ -3,9 +3,19 @@
             background-color: #121212;
         }
 
+
 /* Navigation */
         #nav {
-            background-color: rgba(31,31,31, 0.2);
+            background-color: rgb(24,24,24);
+            position: sticky;
+            top: 0px;
+        }
+
+        #nav h1 {
+            font-family: "Dancing Script";
+            font-size: 30px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, .8);
         }
 
         #nav .navbar-nav {
@@ -82,23 +92,7 @@
         }
 
 /* Header */
-        header h1 {
-            text-align: center;
-            font-size: 50px;
-            color: rgba(255, 255, 255, 0.9);
-            margin: auto;
 
-        }
-        header p {
-            font-size: 20px;
-            text-align: center;
-            font-family: "Dancing Script", sans-serif;
-            color: rgba(64, 224, 208, 0.8);
-        }
-        header hr{
-            border: 0.5px solid rgba(255, 255, 255, 0.3);
-            width: 100%;
-        }
         header .messages {
             text-align: center;
         }
