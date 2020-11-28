@@ -9,6 +9,7 @@
             background-color: rgb(24,24,24);
             position: sticky;
             top: 0px;
+            z-index: 2;
         }
 
         #nav h1 {
