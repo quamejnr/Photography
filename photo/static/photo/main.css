@@ -22,7 +22,11 @@
             box-shadow: rgb(0 0 0) 0px 10px 20px -10px;
         }
 
-        #nav h1 {
+        #nav a:hover {
+            text-decoration: none;
+        }
+
+        #nav a h1 {
             font-family: "Dancing Script";
             font-size: 30px;
             font-weight: 900;
@@ -373,7 +377,7 @@
         #register_form {
             width: 50%;
             margin: 100px auto;
-            border: var(--accent);
+            border: 1px solid var(--accent);
             padding: 20px;
         }
 
@@ -396,8 +400,13 @@
 
         #register_form .reg-footer {
             margin-top: 20px;
-            color: var(--accent);
+            color: var(--secondary);
         }
+
+        #register_form .sign {
+            color: rgba(64, 224, 208, 0.8);
+        }
+
         #logout_form {
             width: 50%;
             margin: 100px auto;
