@@ -1,8 +1,8 @@
 /* Variables */
         :root {
             --background: #121212;
-            --primary: rgba(255, 255, 255, .87);
-            --secondary: rgba(255, 255, 255, 0.6);
+            --primary: rgba(255, 255, 255, 1);
+            --secondary: rgba(255, 255, 255, 0.7);
             --accent: rgba(255, 255, 255, 0.2);
         }
 
@@ -476,7 +476,7 @@
           font-size: 15px;
           letter-spacing: 2px;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.8);
+          color: rgba(255, 255, 255, 1);
         }
 
         #fh5co-footer p {
