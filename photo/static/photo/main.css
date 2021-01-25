@@ -28,7 +28,7 @@
 
         #nav a h1 {
             font-family: "Dancing Script";
-            font-size: 30px;
+            font-size: 20px!important;
             font-weight: 900;
             color: var(--primary);
         }
