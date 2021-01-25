@@ -22,7 +22,7 @@
             </section>
             {% if object.photographer == user %}
                 <section class="d-flex justify-content-center">
-                    <a class="btn btn-outline-secondary btn-sm mt-4 mb-4 " href="{% url 'post-update' object.slug %}">Edit</a>
+                    <a class="btn btn-outline-secondary btn-sm mt-4 mb-4" style="width: 30px; height: 30px;" href="{% url 'post-update' object.slug %}">Edit</a>
                     <a class="btn btn-outline-danger btn-sm mt-4 mb-4 ml-3" href="{% url 'post-delete' object.slug %}">Delete</a>
                 </section>
             {% endif %}
