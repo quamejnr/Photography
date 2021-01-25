@@ -531,6 +531,11 @@
 /* Responsive layouts */
         @media (max-width: 850px) {
 
+        /* Header */
+            #nav a h1 {
+                display:none;
+            }
+
         /*Portfolio*/
             #portfolio .work-info h2 {
                font-size: 40px;
@@ -565,11 +570,6 @@
         }
 
         @media (max-width: 768px) {
-
-        /* Header */
-            #nav h1 {
-                font-size: 25px;
-            }
 
         /*Portfolio*/
             .portfolio-content {
