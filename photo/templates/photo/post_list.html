@@ -9,12 +9,12 @@
     <article id="portfolio">
         {%for post in object_list%}
             <section class="portfolio-content">
-                <a href="{{post.get_absolute_url}}"><img src="{{post.picture.url}}" alt=""></a>
+                <a href="{{post.get_absolute_url}}"><img src="{{post.picture.url}}" loading="lazy" alt=""></a>
                 <section class="work-info">
                     <a href="{{post.get_absolute_url}}"><h2>{{post.title}}</h2></a>
                     <a href="{% url 'photographer-post' post.photographer.username %}">
                         <div class="acc-item mt-2 mb-2">
-                            <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" alt="">
+                            <img class="rounded-circle photographer-img" src="{{post.photographer.profile.image.url}}" loading="lazy" alt="">
                             <h3>{{post.photographer}}</h3>
                         </div>
                     </a>
