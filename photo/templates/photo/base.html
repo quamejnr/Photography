@@ -24,7 +24,7 @@
 
 <!--        Navigation-->
         <nav id="nav">
-            <ul class="navbar navbar-dark navbar-expand-md">
+            <ul class="navbar navbar-dark navbar-expand-md pb-5">
                 <div class="container">
                     <a href="{% url 'post-home' %}">
                         <img class="mb-1" width="45px" height="45px" src="{% static 'photo/android-chrome-512x512.png' %}" alt="">
@@ -44,7 +44,7 @@
                                 <li class="nav-item active"><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
                             {% else %}
                                 <li class="nav-item active"><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
-                                <a href="{% url 'register'%}"><button class="btn mt-2 ml-2">SignUp</button></a>
+                                <a href="{% url 'register'%}"><button class="btn mt-2 ml-1">SignUp</button></a>
                             {% endif %}
                         </div>
                     </div>

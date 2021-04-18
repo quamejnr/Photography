@@ -78,6 +78,10 @@
             background-color: rgba(255, 0, 0, 0.9)!important;
         }
 
+        .navbar {
+            text-align: center;
+        }
+
 /* Pagination */
 
         .pagination > li > a {
